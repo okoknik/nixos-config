@@ -51,8 +51,6 @@
   # Enable the X11 windowing system.
    services.xserver = {
 	enable = true;
-	};
-   services.displayManager = {
 	desktopManager.kodi.enable = true;
 	desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; [ pvr-iptvsimple netflix ]);
 	displayManager.autoLogin = {
