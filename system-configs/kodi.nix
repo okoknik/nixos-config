@@ -21,7 +21,7 @@
     "nixpkgs"
     "-L" # print build logs
   ];
-  dates = "Mon *-*-* 20:00:00";
+  dates = "Mon *-*-* 20:30:00";
   randomizedDelaySec = "45min";
   };
   
