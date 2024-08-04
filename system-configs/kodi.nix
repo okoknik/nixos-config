@@ -15,7 +15,7 @@
   # auto update
  system.autoUpgrade = {
   enable = true;
-  flake = inputs.self.outPath;
+  flake = "github:okoknik/nixos-config";
   flags = [
     "--update-input"
     "nixpkgs"
