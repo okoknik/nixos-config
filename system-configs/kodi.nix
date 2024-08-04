@@ -11,6 +11,19 @@
     ];
   
   nixpkgs.config.allowUnfree = true;
+
+  # auto update
+ system.autoUpgrade = {
+  enable = true;
+  flake = inputs.self.outPath;
+  flags = [
+    "--update-input"
+    "nixpkgs"
+    "-L" # print build logs
+  ];
+  dates = "1week";
+  randomizedDelaySec = "45min";
+  };
   
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
