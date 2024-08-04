@@ -53,11 +53,13 @@
 	enable = true;
 	desktopManager.kodi.enable = true;
 	desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; [ pvr-iptvsimple netflix ]);
+  };
+  services = {
 	displayManager.autoLogin = {
     		enable = true;
     		user = "kodi";
    	};
-  };
+};
 
   # Configure keymap in X11
    services.xserver.xkb.layout = "de";
