@@ -52,7 +52,7 @@
    services.xserver = {
 	enable = true;
 	desktopManager.kodi.enable = true;
-	desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; [ pvr-iptvsimple netflix ]);
+	desktopManager.kodi.package = pkgs.kodi.withPackages (pkgs: with pkgs; [ pvr-iptvsimple netflix mediathekview ]);
   };
   services = {
 	displayManager.autoLogin = {
@@ -83,6 +83,7 @@
      initialPassword = "test";
      packages = with pkgs; [
 	    git
+	   firefox
      ];
    };
 
