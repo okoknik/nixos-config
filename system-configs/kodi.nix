@@ -12,7 +12,7 @@
   
   nixpkgs.config.allowUnfree = true;
   services.avahi = {
-  	nssmdns = true;
+  	nssmdns4 = true;
   	enable = true;
   	publish = {
 		enable = true;
