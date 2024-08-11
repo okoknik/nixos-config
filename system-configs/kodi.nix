@@ -9,6 +9,14 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+  # Enable cron service
+  services.cron = {
+    enable = true;
+    systemCronJobs = [
+      "@reboot uxplay -p"
+    ];
+  };
   
   nixpkgs.config.allowUnfree = true;
   services.avahi = {
