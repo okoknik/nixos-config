@@ -11,6 +11,15 @@
     ];
   
   nixpkgs.config.allowUnfree = true;
+  services.avahi = {
+  	nssmdns = true;
+  	enable = true;
+  	publish = {
+		enable = true;
+		userServices = true;
+    		domain = true;
+  	};
+  };
 
   # auto update
  system.autoUpgrade = {
@@ -84,6 +93,7 @@
      packages = with pkgs; [
 	    git
 	   firefox
+	   uxplay
      ];
    };
 
@@ -100,8 +110,8 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-   networking.firewall.allowedTCPPorts = [ 22 8080 22000 8384 ];
-   networking.firewall.allowedUDPPorts = [ 8080 22000 21027 ];
+   networking.firewall.allowedTCPPorts = [ 22 8080 22000 8384 7100 7000 7001 ];
+   networking.firewall.allowedUDPPorts = [ 8080 22000 21027 6000 6001 7011 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
