@@ -104,6 +104,7 @@
 	    git
 	   firefox
 	   uxplay
+	   localsend
      ];
    };
 
