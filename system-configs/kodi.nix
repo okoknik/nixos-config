@@ -16,7 +16,9 @@
   	enable = true;
   	publish = {
 		enable = true;
-		userServices = true;
+		addresses = true;
+		workstation = true;
+		userServices = true
     		domain = true;
   	};
   };
